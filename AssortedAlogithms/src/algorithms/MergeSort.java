@@ -22,8 +22,8 @@ public class MergeSort {
 		for(int j = 0; j < n2; j++) {
 			R[j] = A[q+j+1];
 		}
-		L[n1] = 100;
-		R[n2] = 100;
+		L[n1] = Integer.MAX_VALUE;
+		R[n2] = Integer.MAX_VALUE;
 		int i = 0;
 		int j = 0;
 		for(int k = p; k <= r; k++) {
