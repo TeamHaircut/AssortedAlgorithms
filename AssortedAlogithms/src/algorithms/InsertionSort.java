@@ -2,7 +2,7 @@ package algorithms;
 
 public class InsertionSort {
 	
-	public static int[] sort(int[] A) {
+	public static void sort(int[] A) {
 		for(int j = 1; j < A.length; j++) {
 			int key = A[j];
 			int i = j - 1;
@@ -12,7 +12,6 @@ public class InsertionSort {
 			}
 			A[i+1] = key;
 		}
-		return A;
 	}
 
 }
