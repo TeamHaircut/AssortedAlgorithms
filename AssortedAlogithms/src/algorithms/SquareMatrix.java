@@ -15,5 +15,6 @@ public class SquareMatrix {
 		}
 		return C;
 	}
-
+	
+	//todo implement strassen algorithm
 }
