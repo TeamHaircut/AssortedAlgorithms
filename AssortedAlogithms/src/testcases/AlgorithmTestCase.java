@@ -1,5 +1,7 @@
 package testcases;
 
+import java.util.Arrays;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -7,6 +9,7 @@ import algorithms.BubbleSort;
 import algorithms.InsertionSort;
 import algorithms.MaximumSubArray;
 import algorithms.MergeSort;
+import algorithms.Randomize;
 import algorithms.SquareMatrix;
 
 public class AlgorithmTestCase {
@@ -51,6 +54,13 @@ public class AlgorithmTestCase {
 		};
 		int[][] C = SquareMatrix.multiply(A,B);
 		assertArrayEquals(new int[][]{{14,12},{33,69}},C);
+	}
+	
+	@Test
+	public void randomizeInPlaceTest() {
+		int[] A = new int[]{5,3,1,7,20,45,16};
+		Randomize.inPlace(A);
+		assertFalse(Arrays.equals(new int[]{5,3,1,7,20,45,16}, A));
 	}
 
 }
