@@ -10,7 +10,7 @@ import algorithms.InsertionSort;
 import algorithms.MaximumSubArray;
 import algorithms.MergeSort;
 import algorithms.Randomize;
-import algorithms.SquareMatrix;
+import algorithms.MatrixMultiplication;
 
 public class AlgorithmTestCase {
 	
@@ -43,7 +43,7 @@ public class AlgorithmTestCase {
 	}
 	
 	@Test
-	public void squareMatrixMultiplyTest() {
+	public void sqMatrixMultiplyTest() {
 		int[][] A = new int[][]{
 				{0,2},
 				{5,4}
@@ -52,7 +52,7 @@ public class AlgorithmTestCase {
 				{1,9},
 				{7,6}
 		};
-		int[][] C = SquareMatrix.multiply(A,B);
+		int[][] C = MatrixMultiplication.multiply(A,B);
 		assertArrayEquals(new int[][]{{14,12},{33,69}},C);
 	}
 	
@@ -61,6 +61,25 @@ public class AlgorithmTestCase {
 		int[] A = new int[]{5,3,1,7,20,45,16};
 		Randomize.inPlace(A);
 		assertFalse(Arrays.equals(new int[]{5,3,1,7,20,45,16}, A));
+	}
+	
+	@Test
+	public void sqRecursiveMatrixMultiplyTest() {
+		int[][] A = new int[][]{
+				{2,3,7,8},
+				{4,5,6,9},
+				{1,2,3,4},
+				{2,6,3,7}
+		};
+		int[][] B = new int[][]{
+				{6,7,3,8},
+				{8,9,2,9},
+				{4,5,6,4},
+				{1,6,8,2}
+		};
+		int[][] test = MatrixMultiplication.multiply(A, B);
+		int[][] C = MatrixMultiplication.recursiveMultiply(A,B);
+		assertArrayEquals(test,C);
 	}
 
 }
