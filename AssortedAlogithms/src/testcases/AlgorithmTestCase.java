@@ -81,5 +81,24 @@ public class AlgorithmTestCase {
 		int[][] C = MatrixMultiplication.recursiveMultiply(A,B);
 		assertArrayEquals(test,C);
 	}
+	
+	@Test
+	public void strassenTest() {
+		int[][] A = new int[][]{
+				{2,3,7,8},
+				{4,5,6,9},
+				{1,2,3,4},
+				{2,6,3,7}
+		};
+		int[][] B = new int[][]{
+				{6,7,3,8},
+				{8,9,2,9},
+				{4,5,6,4},
+				{1,6,8,2}
+		};
+		int[][] test = MatrixMultiplication.multiply(A, B);
+		int[][] C = MatrixMultiplication.strassen(A,B);
+		assertArrayEquals(test,C);
+	}
 
 }
