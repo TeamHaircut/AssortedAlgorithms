@@ -9,6 +9,7 @@ import algorithms.BubbleSort;
 import algorithms.InsertionSort;
 import algorithms.MaximumSubArray;
 import algorithms.MergeSort;
+import algorithms.PermutationSort;
 import algorithms.Randomize;
 import algorithms.MatrixMultiplication;
 
@@ -99,6 +100,13 @@ public class AlgorithmTestCase {
 		int[][] test = MatrixMultiplication.multiply(A, B);
 		int[][] C = MatrixMultiplication.strassen(A,B);
 		assertArrayEquals(test,C);
+	}
+	
+	@Test
+	public void permuteBySortingTest() {
+		int[] A = new int[] {1,2,3,4};
+		PermutationSort.permuteBySorting(A);
+		assertFalse(Arrays.equals(new int[]{1,2,3,4}, A));
 	}
 
 }
