@@ -156,7 +156,7 @@ public class MatrixMultiplication {
 		return C;
 	}
 	
-	public static int[][] add(int[][] A, int[][] B) {
+	private static int[][] add(int[][] A, int[][] B) {
 		int n = A.length;
 		int[][] C = new int[n][n];
 		for(int i = 0; i < n; i++) {
@@ -167,7 +167,7 @@ public class MatrixMultiplication {
 		return C;
 	}
 	
-	public static int[][] sub(int[][] A, int[][] B) {
+	private static int[][] sub(int[][] A, int[][] B) {
 		int n = A.length;
 		int[][] C = new int[n][n];
 		for(int i = 0; i < n; i++) {
