@@ -7,4 +7,4 @@
 <p>* Randomize In Place</p>
 <p>* Square Matrix Multiplication (Recursive)</p>
 <p>* Strassen Matrix Multiplication</p>
-<p>* Permute By Sorting</p>
+<p>* Permutation Sort</p>
