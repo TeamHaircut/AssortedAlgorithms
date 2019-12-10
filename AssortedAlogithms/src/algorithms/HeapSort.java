@@ -9,9 +9,9 @@ public class HeapSort {
 		buildMaxHeap(A);
 		for(int i = A.length-1; i >= 1; i--) {
 			int temp = A[0]; 
-            A[0] = A[i]; 
-            A[i] = temp;
-            heapSize = heapSize - 1;
+            		A[0] = A[i]; 
+            		A[i] = temp;
+            		heapSize = heapSize - 1;
 			maxHeapify(A,0);
 		}
 	}
@@ -33,8 +33,8 @@ public class HeapSort {
 		}
 		if(largest != i) {
 			int temp = A[i]; 
-            A[i] = A[largest]; 
-            A[largest] = temp;
+            		A[i] = A[largest]; 
+            		A[largest] = temp;
 			maxHeapify(A,largest);
 		}
 	}
