@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 import algorithms.BubbleSort;
+import algorithms.HeapSort;
 import algorithms.InsertionSort;
 import algorithms.MaximumSubArray;
 import algorithms.MergeSort;
@@ -26,6 +27,13 @@ public class AlgorithmTestCase {
 	public void mergeSortTest() {
 		int[] A = new int[]{5,3,1,7,20,45,16};
 		MergeSort.sort(A,0,A.length-1);
+		assertArrayEquals(new int[]{1,3,5,7,16,20,45},A);
+	}
+	
+	@Test
+	public void heapSortTest() {
+		int[] A = new int[]{5,3,1,7,20,45,16};
+		HeapSort.sort(A);
 		assertArrayEquals(new int[]{1,3,5,7,16,20,45},A);
 	}
 	
