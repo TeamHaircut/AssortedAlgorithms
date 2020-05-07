@@ -8,5 +8,4 @@
 <p>* Square Matrix Multiplication (Recursive)</p>
 <p>* Strassen Matrix Multiplication</p>
 <p>* Permutation Sort</p>
-
-<p>- Heap Sort</p>
+<p>* Heap Sort</p>
